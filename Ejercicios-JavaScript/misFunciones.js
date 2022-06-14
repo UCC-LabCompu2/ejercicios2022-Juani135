@@ -105,3 +105,18 @@ function cargarResultado(){
     un = urlComp.split("#")[2];
     document.getElementById("dist").value = can + " " + un;
 }
+
+function dibujarCirCuad(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    var margen = 5;
+    ctx.fillStyle = "#333899";
+    ctx.fillRect(0+margen,yMax-40-margen,40,40);
+
+    ctx.arc(xMax/2, yMax/2, 20, 0, 2*Math.PI);
+    ctx.stroke();
+    ctx.fill();
+}
